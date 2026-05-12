@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MI Fan Website</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+    header {
+      background: #2124cb;
+      color: #000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li { margin: 10px; }
+
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover { text-decoration: underline; }
+
+    section { padding: 40px; text-align: center; }
+
+    #home { background: #75a2e2; }
+    #players { background: #75a2e2; }
+    #matches { background: #75a2e2; }
+    #stats { background: #75a2e2; }
+    #news { background: #75a2e2; }
+    #contact { background: #75a2e2; }
+
+    .container { max-width: 1000px; margin: auto; }
+
+    .card {
+      border: 1px solid #ccc;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: #000;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      width: 80%;
+    }
+
+    footer {
+      background: #3a23c0;
+      color: black;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media(max-width: 768px) {
+      nav ul { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mumbai indians Fan Page </h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#players">Players</a></li>
+      <li><a href="#matches">Matches</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <div class="container">
+    <h2>Welcome MI Fans!</h2>
+    <p>Your one-stop destination for team updates, matches, and fan engagement.</p>
+  </div>
+</section>
+
+<section id="players">
+  <div class="container">
+    <h2>Team Players</h2>
+
+    <div class="card">
+      <h3>Rohit Sharma </h3>
+      <p>Role: Opener, Batsman</p>
+    </div>
+
+    <div class="card">
+      <h3>Hardik Pandya</h3>
+      <p>Role: All-rounder</p>
+    </div>
+
+    <div class="card">
+      <h3>Surya Kumar Yadav</h3>
+      <p>Role: Batsman</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="matches">
+  <div class="container">
+    <h2>Match Schedule</h2>
+
+    <div class="card">MI vs CSK - April 10</div>
+    <div class="card">MI vs RCB - April 15</div>
+    <div class="card">MI vs SRH - April 20</div>
+
+  </div>
+</section>
+
+<section id="stats">
+  <div class="container">
+    <h2>Team Stats</h2>
+
+    <div class="card">
+      <p>Matches Played: 220+</p>
+      <p>Wins: 140+</p>
+      <p>IPL Trophies: 5 🏆</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="news">
+  <div class="container">
+    <h2>Latest News</h2>
+
+    <div class="card">MI wins last match in a thriller!</div>
+    <div class="card">Young talent shines in recent game.</div>
+
+    <h3>Fan Poll</h3>
+    <button onclick="vote()">Will MI win next match?</button>
+    <p id="poll"></p>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact / Feedback</h2>
+    <input type="text" placeholder="Your Name"><br>
+    <input type="email" placeholder="Your Email"><br>
+    <button onclick="submitForm()">Submit</button>
+    <p id="msg"></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 MI Fan Website</p>
+</footer>
+
+<script>
+  function vote() {
+    document.getElementById("poll").innerText = "Thanks for voting! ";
+  }
+
+  function submitForm() {
+    document.getElementById("msg").innerText = "Feedback submitted successfully!";
+  }
+</script>
+
+</body>
+</html>
